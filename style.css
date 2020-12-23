@@ -1,0 +1,378 @@
+a{
+	color:#000;
+	text-decoration: none;
+}
+.body{
+	width:100%;
+	
+	margin:0;
+	padding:0;
+}
+.header{
+	display: flex;
+	justify-content: space-between;
+	padding: 1vw;
+	background:#fff;
+	color:#000;
+	font-family: 'Montserrat', sans-serif;
+}
+.header_section{
+	display: flex;
+	align-items: center;
+	/*margin-left:7%;*/
+	flex-direction:row;
+	justify-content:center;
+	
+}
+.header_section2{
+	display: flex;
+	align-items: center;
+	
+}
+.header_item{
+	text-align:center;
+	padding: 0.5vw 1vw;
+	font-size:1.5vw;
+	
+	
+}
+.header item:hover{
+	background-color:#EE8090;
+	border-radius: 5px;
+}
+.headerlogo{
+	display: flex;
+	font-weight:bold;
+	font-size:2.1vw;
+	margin-left:1.15%;
+}
+.headerlogo img{
+	width:2.5vw;
+	/*height:4vh;*/
+	transform: rotate(60deg);
+	margin-left:0.15vw;
+}
+
+#button{
+	width: 25px;
+	height: 25px;
+	background: #692238;
+	border-radius:100%;
+	border: 2px solid #F1F1F1;
+}
+#button:focus{
+	outline:none;
+}
+.menu{
+	display:none;
+}
+.second_menu{
+	margin:0;
+	padding:0;
+}
+.second_menu ul {
+      list-style: none; /*убираем маркеры списка*/
+      margin: 0; /*убираем отступы*/
+      padding-left: 0; /*убираем отступы*/
+      margin-top:25px; /*делаем отступ сверху*/
+      background:#fff; /*добавляем фон всему меню*/
+      height: 50px; /*задаем высоту*/
+	  text-decoration:none;
+	  text-transform:none;
+	  font-family: 'Rubik';
+    }
+	#download {
+		list-style: none;
+		text-decoration:none;
+		font-weight:0;
+		text-transform:none;
+	}
+.second_menu    a {
+      text-decoration: none; /*убираем подчеркивание текста ссылок*/
+      background:#fff; /*добавляем фон к пункту меню*/
+      color:#000; /*меняем цвет ссылок*/
+      /*padding:0px 15px;*/ /*добавляем отступ*/
+      font-family: 'Rubik'; /*меняем шрифт*/
+      line-height:50px; /*ровняем меню по вертикали*/
+      display: block; 
+     /* border-right: 1px solid #677B27; /*добавляем бордюр справа*/
+      -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
+      -o-transition: all 0.3s 0.01s ease;
+      -webkit-transition: all 0.3s 0.01s ease;
+    }
+.second_menu    a:hover {
+      background:#EE8090;/*добавляем эффект при наведении*/
+    }
+.second_menu    li {
+		font-family:'Rubik';
+      float:left; /*Размещаем список горизонтально для реализации меню*/
+      position:relative; /*задаем позицию для позиционирования*/
+    }
+         
+        /*Стили для скрытого выпадающего меню*/
+.second_menu        li > ul {
+            position:absolute;
+            top:25px;
+            display:none;  
+			font-family:'Rubik';			
+        }
+         
+        /*Делаем скрытую часть видимой*/
+ .second_menu       li:hover > ul {
+            display:block; 
+            width:250px;  /*Задаем ширину выпадающего меню*/      
+        }
+ .second_menu      li:hover > ul > li {
+            float:none; /*Убираем горизонтальное позиционирование*/
+        }
+
+.hamburger-menu{
+	display:none;
+}
+@media screen and (max-width:600px) {
+#menu__toggle {
+  opacity: 0;
+  background-color:#EE8090;
+  background:#EE8090;
+}
+.header{
+	background-color:#EE8090;
+}
+.header_section,.header_section2{
+	display:none;
+}
+.headerlogo{
+	display:none;
+}
+.hamburger-menu{
+	display:block;
+	background-color:#EE8090;
+	margin:0; 
+}
+
+/* стилизуем кнопку */
+
+.menu__btn {
+  display: flex; /* используем flex для центрирования содержимого */
+  align-items: center;  /* центрируем содержимое кнопки */
+  position: fixed;
+  top: 20px;
+  left: 20px;  width: 40px;
+  height: 40px;  cursor: pointer;
+  z-index: 1;
+}/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span:before,
+.menu__btn > span:after {
+  display: block;
+  position: absolute;  width: 100%;
+  height: 2px;  background-color: #000;
+}
+.menu__btn > span:before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span:after {
+  content: '';
+  top: 8px;
+}
+
+/* контейнер меню */
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;  width: 300px;
+  height: 100%;  margin: 0;
+  padding: 80px 0;  list-style: none;
+  text-align: center;  background-color: #FDF8F6;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}/* элементы меню */
+.menu__item {
+  display: block;
+  padding: 12px 24px;  color: #000;  
+  font-family: 'Rubik';
+  font-size: 20px;
+  font-weight: 100;  text-decoration: none;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .25s;
+}.menu__box {
+  transition-duration: .25s;
+}.menu__item {
+  transition-duration: .25s;
+}
+}
+
+.container{
+	background:#EE8090;
+	color:#fff;
+	display:flex;
+	height:100%;
+	width:100%;
+	flex-direction:row;
+	justify-content:space-around;
+	align-items:center;
+	
+}
+
+.container_box1{
+	font-family:'Rubik';
+	font-size:3vw;
+	text-transform: uppercase;
+	align-items:center;
+	
+}
+.container_box2{
+	margin-top:5%;
+	margin-bottom:5%;
+	
+}
+.container_img{
+	width:35vw;
+	border-radius:265px;
+}
+.dog2{
+	display:none;
+}
+.container2{
+	background:#EE8090;
+	color:#000;
+	padding: 0 64px;
+	display:flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+	justify-content:center;
+}
+
+.container2_item{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 32px 64px;
+	background:#FDF8F6;
+	border-radius: 15px;
+	margin:20px;
+	color:#000;
+	font-family:Rubik;
+	font-size:16px;
+	
+}
+.centered{
+	text-align: center;
+}
+.container2_item img{
+	width:100px;
+}
+.container2_item p{
+	align-items:flex-end;
+	text-align:center;
+}
+
+@media screen and (max-width:600px) {
+	.container2{
+	background:#EE8090;
+	color:#000;
+	flex-direction:column;
+	align-items:center;
+	flex-wrap:wrap;
+	}
+
+	.container2_item{
+	width: 140px;
+	padding: 16px 32px;
+	background:#FDF8F6;
+	border-radius: 15px;
+	margin:8px;
+	color:#000;
+	font-family:Rubik;
+	font-size:1rem;
+	}
+	.centered > img{
+		width: 64px;
+	}
+}
+@media screen and (max-width: 400px) {
+	.container2{
+		padding: 0;
+	}
+}
+.container3{
+	background:#EE8090;
+	display:flex;
+	height:5vh;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+}
+.container3_item{
+	width:60vw;
+	height:1vh;
+	background:#FDF8F6;
+	border-radius: 15px;
+	color:#fff;
+}
+
+.container4{
+	width:100%;
+	height:100%;
+	background:#FDF8F6;
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+	margin:0;
+}
+.container4_item{
+	background:#FDF8F6;
+	/*border-radius: 15px;
+	margin:2%;*/
+	color:#EE8090;
+	font-family:Rubik;
+	font-size:5vw;
+	text-transform:uppercase;
+	
+}
+
+.container4_button {
+	display: flex;
+	align-items: center;
+	text-align: center;
+    justify-content:center; 
+    color: #000; 
+    text-decoration: none; 
+	background: #FDF8F6;
+	border: 0.15vw solid #000000;
+	box-sizing: border-box;
+	border-radius: 2.5vw;
+	width:25vw;
+	height:7vh;
+	font-size:2vw;
+	font-family:'Rubik';
+	font-weight:500;
+	text-transform:uppercase;
+	margin-bottom:5vh;
+   }

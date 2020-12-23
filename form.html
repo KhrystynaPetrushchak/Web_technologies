@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PetSit</title>
+	<link rel="stylesheet" href="form.css">
+	<script type="text/javascript">
+		function valid(form){
+			var fail = false;
+			var name = form.name.value;
+			if (name == "" || name == " ")
+				fail = "Please enter your name";
+				if(fail){
+					alert(fail);
+					return false;
+				} else {
+				    return true;
+				}
+		}
+	</script>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+	<meta http-equiv="Content-Type"> 
+</head>
+<body class="body">
+
+<div class="header">
+				<div class="headerlogo">
+					PetSit 
+					<img src="images/paw.svg" alt="paw">
+				</div>
+		<div class="header_section">
+				
+				<div class="header_item headerButton"><a href="#">About</a></div>
+				<div class="header_item headerButton"><a href="#">History</a></div>
+				<div class="header_item headerButton"><a href="#">Download</a></div>
+				<div class="header_item headerButton"><a href="#">Donations</a></div>
+				<div class="header_item headerButton"><a href="#">Contact</a></div>
+		</div>
+		<div class="header_section2">
+			<div class="header_item headerButton"><a href="#">Sign in</a></div>
+			<div class="header_item headerButton"><a href="#">Sign up</a></div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="container_box1">
+			<p>Registration form</p>
+		</div>
+	</div>
+	<div class="container2">
+		<div class="container2_form">
+		
+			<form action="#" method="post" enctype="multipart/form-data">
+				<div class="container2_form_item">
+					<input placeholder="Enter username" type="text" name="Username" value="" id="username"/>
+					<p id="username-message" class="message"> </p>
+				</div>
+				
+				<div class="container2_form_item">
+					<input placeholder="Enter your first name" type="text" name="First name" value=""/>
+				</div class="container2_form_item">
+				
+				<div class="container2_form_item">
+					<input placeholder="Enter last name" type="text" name="Last name" value=""/>
+				</div>
+				
+				<div class="container2_form_item">
+					<input placeholder="Enter the name of your pet" type="text" name="Name of your pet" value=""/>
+					
+				</div>
+				
+				<div class="container2_form_item">
+					<input placeholder="Enter your email" type="text" id="email" name="E-mail" value=""/>
+					<p id="email-message" class="message"> </p>
+				</div>
+				
+				<div class="container2_form_item">
+					<select name="kind" class="select-css">
+						<option selected value="empty">Your pet is...</option>
+						<option value="Dog">Dog</option>
+						<option value="Cat">Cat</option>
+					</select>
+				</div>
+				
+				<div class="container2_form_item">
+					<input placeholder="Your phone number"type="tel" id="tel" name="Phone number" value=""/>
+					<p id="tel-message" class="message"> </p>
+				</div>
+				
+				<div class="container3_form_item">
+				<p>Gender</P>
+				
+				</div>
+				
+				
+				<div class="container3_form_item">
+					<input type="radio" name="gender" value="women" id="rb1"/><label for="rb1"> Women</label>
+					<input type="radio" name="gender" value="men" id="rb2"/><label for="rb2"> Men</label>
+				</div>
+				
+							
+				<div class="container2_form_item">
+					<input placeholder="Enter your password" id="password" type="password" name="User password"/>
+					<p id="password-message" class="message"> </p>
+				</div>
+				<div class="container5_form_item">
+					
+					
+						<input type="checkbox" name="subscribe" value="yes" id="cb1"/>
+						<label for="cb1">I want to subscribe for your mailing</label>	
+					
+				</div>
+				
+				<div class="container4_form_item">
+				
+					<button type="submit" class="button">Send</button>
+				</div>
+				
+			</form>
+			
+	
+		</div>
+	</div>
+
+
+
+
+
+<script rel="script" src="index.js"></script>
+</body>
+</html>
